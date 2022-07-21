@@ -86,12 +86,11 @@ module.exports = ({ name, price1, price2, receiptId }) => {
 								 <td colspan="2">
 										<table>
 											 <tr>
-													<td class="title"><img  src="https://i2.wp.com/cleverlogos.co/wp-content/uploads/2018/05/reciepthound_1.jpg?fit=800%2C600&ssl=1"
-														 style="width:100%; max-width:156px;"></td>
+													<td class="title"><img src="https://i.ibb.co/vPnW35Y/cinch-logo.png" alt="cinch-logo" border="0" style="width:100%; max-width:156px;"></td>
 													<td>
-														 Datum: ${`${today.getDate()}. ${
-                               today.getMonth() + 1
-                             }. ${today.getFullYear()}.`}
+														 Date: ${`${
+															today.getMonth() + 1
+														}-${today.getDate()}-${today.getFullYear()}.`}
 													</td>
 											 </tr>
 										</table>
@@ -116,18 +115,18 @@ module.exports = ({ name, price1, price2, receiptId }) => {
 								 <td>Price</td>
 							</tr>
 							<tr class="item">
-								 <td>First item:</td>
-								 <td>${price1}$</td>
+								 <td>Total:</td>
+								 <td>$${price1}</td>
 							</tr>
 							<tr class="item">
-								 <td>Second item:</td>
-								 <td>${price2}$</td>
+								 <td>Insurance:</td>
+								 <td>$${price2}</td>
 							</tr>
 					 </table>
 					 <br />
-					 <h1 class="justify-center">Total price: ${
-             parseInt(price1) + parseInt(price2)
-           }$</h1>
+					 <h1 class="justify-center">Total Due Upon Receipt: $${
+             parseInt(price1 - price2)
+           }</h1>
 				</div>
 		 </body>
 	</html>

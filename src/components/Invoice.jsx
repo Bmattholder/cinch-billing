@@ -21,13 +21,13 @@ class Invoice extends Component {
       .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-        saveAs(pdfBlob, 'invoice.pdf');
-      })
+        saveAs(pdfBlob, 'newPDF.pdf');
+      });
   };
 
   render() {
     return (
-      <div className='Invoice'>
+      <div className='App'>
         <input
           type='text'
           placeholder='Name'
@@ -42,13 +42,13 @@ class Invoice extends Component {
         />
         <input
           type='number'
-          placeholder='Price 1'
+          placeholder='Total'
           name='price1'
           onChange={this.handleChange}
         />
         <input
           type='number'
-          placeholder='Price 2'
+          placeholder='Ins Coverage Amt'
           name='price2'
           onChange={this.handleChange}
         />
