@@ -88,9 +88,7 @@ module.exports = ({ name, price1, price2, receiptId }) => {
 											 <tr>
 													<td class="title"><img src="https://i.ibb.co/vPnW35Y/cinch-logo.png" alt="cinch-logo" border="0" style="width:100%; max-width:156px;"></td>
 													<td>
-														 Date: ${`${
-															today.getMonth() + 1
-														}-${today.getDate()}-${today.getFullYear()}.`}
+														 Date: ${`${today.getMonth() + 1}-${today.getDate()}-${today.getFullYear()}.`}
 													</td>
 											 </tr>
 										</table>
@@ -124,9 +122,9 @@ module.exports = ({ name, price1, price2, receiptId }) => {
 							</tr>
 					 </table>
 					 <br />
-					 <h1 class="justify-center">Total Due Upon Receipt: $${
-             parseInt(price1 - price2)
-           }</h1>
+					 <h1 class="justify-center">Total Due Upon Receipt: $${parseInt(
+             price1 - price2
+           )}</h1>
 				</div>
 		 </body>
 	</html>
